@@ -1,3 +1,14 @@
+첫 번째 작업 만들기
+----
+
+```cs
+class MyTask : ChainTask {
+    public override OnExecute() {
+        Console.WriteLine("Hello World");
+    }
+}
+```
+
 IN-OUT 파라미터 규칙
 ----
 
