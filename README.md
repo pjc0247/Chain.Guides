@@ -9,6 +9,20 @@ class MyTask : ChainTask {
 }
 ```
 
+비동기 실행하기
+----
+`.Async()` 메소드를 사용하여 태스크가 비동기로 실행됨을 지정할 수 있습니다.
+```cs
+.Task<TASK_NAME_1>().Async()
+.Task<TASK_NAME_2>().Async()
+.Task<TASK_NAME_3>().Async()
+```
+`WaitForAllAsyncTasks`를 사용하면 실행중인 모든 비동기 태스크가 완료될 때 까지 대기합니다.
+```cs
+.Task<WaitForAllAsyncTasks>();
+.Task<TASK_NAME_4>(); // 이 태스크는 모든 비동기 태스크 완료 후 실행됩니다.
+```
+
 IN-OUT 파라미터 규칙
 ----
 
